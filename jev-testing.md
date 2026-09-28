@@ -8,7 +8,7 @@ Model: `jev-1.13.0` via the [TypeSafe playground](https://console.typesafe.ai/pl
 ### Intended use case
 
 A disaster simulation of San Francisco.
-About 1,000 citizen agents react in real time to events that judges inject, such as an earthquake, a bridge closure, or a viral tsunami rumor.
+About 1,000 citizen agents react in real time to events that users inject, such as an earthquake, a bridge closure, or a viral tsunami rumor.
 Every citizen makes a fast decision each tick.
 Only citizens who are unsure stop to reason in depth.
 
