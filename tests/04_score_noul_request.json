@@ -1,0 +1,19 @@
+{
+  "state": "Tom, 22, fled Crissy Field. A viral post says \"TSUNAMI COMING IN 10 MIN, 30 FT WAVE.\" No official alert. Everyone around him is running uphill and screaming.",
+  "questions": {
+    "panic": {
+      "type": "score",
+      "instructions": "How panicked is Tom right now?",
+      "criteria": [
+        "Calm",
+        "Uneasy",
+        "Scared but thinking clearly",
+        "Panicking, not thinking clearly"
+      ]
+    },
+    "believes_rumor": {
+      "type": "noul",
+      "instructions": "Does Tom believe the tsunami rumor?"
+    }
+  }
+}

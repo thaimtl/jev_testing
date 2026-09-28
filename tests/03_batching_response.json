@@ -1,0 +1,47 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "c1": {
+      "type": "choice",
+      "choice": "flee_inland",
+      "confidence": 0.58,
+      "probabilities": {
+        "call_family": 0.2,
+        "stay": 0.08,
+        "help_others": 0.04,
+        "flee_inland": 0.68
+      },
+      "stats": {}
+    },
+    "c2": {
+      "type": "choice",
+      "choice": "call_family",
+      "confidence": 0.41,
+      "probabilities": {
+        "call_family": 0.56,
+        "help_others": 0,
+        "stay": 0.44,
+        "flee_inland": 0
+      },
+      "stats": {}
+    },
+    "c3": {
+      "type": "choice",
+      "choice": "help_others",
+      "confidence": 0.92,
+      "probabilities": {
+        "call_family": 0,
+        "stay": 0.05,
+        "help_others": 0.94,
+        "flee_inland": 0.01
+      },
+      "stats": {}
+    }
+  },
+  "usage": {
+    "input_tokens": 681,
+    "output_tokens": 156
+  },
+  "request_id": "playground_13eb9697960f55045a999fcb5386f4f41b7",
+  "evaluation_time_ms": 85.62306300063938
+}

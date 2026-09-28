@@ -1,0 +1,15 @@
+{
+  "state": "Maria, 34, is at Marina Safeway. A 7.1 earthquake just hit. The store is partly collapsed and smoke is coming from the back. She is alone and unhurt. Her car is in the parking lot.",
+  "questions": {
+    "action": {
+      "type": "choice",
+      "instructions": "What does Maria do in the next minute?",
+      "criteria": {
+        "flee_outside": "Get out of the building to open space",
+        "shelter_in_place": "Take cover inside and wait",
+        "help_others": "Stay to help injured people nearby",
+        "drive_away": "Get in her car and drive off"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "state": {
+    "event": "7.1 earthquake 30 seconds ago. Golden Gate Bridge closed.",
+    "citizens": {
+      "c1": "Tom, 22, runner, on Crissy Field beach, phone working",
+      "c2": "Linda, 71, uses a walker, alone in 3rd floor apartment, building shaking stopped",
+      "c3": "Raj, 40, doctor, driving on Lombard St, sees a car crash ahead"
+    }
+  },
+  "questions": {
+    "c1": {
+      "type": "choice",
+      "instructions": "Predict what citizen c1 would actually do next, based on how real people behave in disasters.",
+      "criteria": {
+        "flee_inland": "Move away from water to higher ground",
+        "stay": "Stay where they are",
+        "help_others": "Help people nearby",
+        "call_family": "Stop to contact family"
+      }
+    },
+    "c2": {
+      "type": "choice",
+      "instructions": "Predict what citizen c2 would actually do next, based on how real people behave in disasters.",
+      "criteria": {
+        "flee_inland": "Move away from water to higher ground",
+        "stay": "Stay where they are",
+        "help_others": "Help people nearby",
+        "call_family": "Stop to contact family"
+      }
+    },
+    "c3": {
+      "type": "choice",
+      "instructions": "Predict what citizen c3 would actually do next, based on how real people behave in disasters.",
+      "criteria": {
+        "flee_inland": "Move away from water to higher ground",
+        "stay": "Stay where they are",
+        "help_others": "Help people nearby",
+        "call_family": "Stop to contact family"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "action": {
+      "type": "choice",
+      "choice": "shelter_in_place",
+      "confidence": 0.24,
+      "probabilities": {
+        "drive_away": 0,
+        "flee_outside": 0.29,
+        "shelter_in_place": 0.4,
+        "get_child": 0.04,
+        "check_neighbor": 0.27
+      },
+      "stats": {}
+    }
+  },
+  "usage": {
+    "input_tokens": 459,
+    "output_tokens": 68
+  },
+  "request_id": "playground_13e584651ea60484936a0d2b6e31a422575",
+  "evaluation_time_ms": 84.56823699816596
+}

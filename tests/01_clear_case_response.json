@@ -1,0 +1,10 @@
+{
+  "_note": "Full JSON was not saved. Only the choice and confidence were recorded during testing.",
+  "answers": {
+    "action": {
+      "type": "choice",
+      "choice": "flee_outside",
+      "confidence": 0.97
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "state": "Maria, 34, is at Marina Safeway. A 7.1 earthquake just hit. The building looks intact. Her 6-year-old is at Marina Elementary, 10 blocks away. Her elderly neighbor, who lives alone and uses a wheelchair, is 2 blocks away. Radio says stay off the roads. Her phone has no signal.",
+  "questions": {
+    "action": {
+      "type": "choice",
+      "instructions": "Predict what Maria would actually do in the next minute, based on how real people behave in disasters, not what official safety advice recommends.",
+      "criteria": {
+        "flee_outside": "Get out of the building to open space",
+        "shelter_in_place": "Take cover inside and wait",
+        "get_child": "Go to her child's school on foot",
+        "check_neighbor": "Go check on her elderly neighbor",
+        "drive_away": "Get in her car and drive off"
+      }
+    }
+  }
+}

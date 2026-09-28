@@ -35,6 +35,8 @@ The key assumption to test: Jev's calibrated confidence can act as the trigger t
 
 ## Tests
 
+Exact inputs and outputs for each test are in [`tests/`](tests/) as `<test>_request.json` (state and questions) and `<test>_response.json` (raw playground response).
+
 ### Test 1: Clear-cut case
 
 State: Maria is in a partly collapsed, smoking Safeway after a 7.1 earthquake, alone and unhurt.
