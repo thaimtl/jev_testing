@@ -1,4 +1,15 @@
-# Jev
+# Jev Research
+
+This repo is where I test what TypeSafe's Jev model is good for.
+Each use case gets its own folder with its background, experiments, and raw results.
+
+## Use cases
+
+| Use case | Question | Status |
+|---|---|---|
+| [Agent simulation](use-cases/agent-simulation/) | Can Jev and Claude together run agent societies 10x bigger for the same cost? | Playground tests done |
+
+## What Jev is
 
 Jev is a "System One" model from TypeSafe AI, and the easiest way I've found to think about it is as a smart `if` statement.
 It doesn't write text.
@@ -39,9 +50,15 @@ It makes decisions, and it tells you how sure it is about each one.
 
 TypeSafe hasn't published the model's internal architecture, so everything here comes from its public interface and how it behaved when I tested it.
 
-## Why I'm using it
+## Repo layout
 
-I'm building a disaster simulation of San Francisco where every citizen makes a decision every few seconds, which is way too many calls for a normal LLM.
-Jev plays System 1 from Daniel Kahneman's *Thinking, Fast and Slow*, the fast and intuitive side, so every citizen reacts on instinct.
-Claude plays System 2, the slow and deliberate side, and it only steps in when Jev's confidence drops, which is exactly when a real person would stop and think.
-The playground tests are in [jev-testing.md](jev-testing.md), and the raw requests and responses are in [`tests/`](tests/).
+```
+README.md                  what Jev is and an index of use cases
+use-cases/
+  <use-case>/
+    README.md              background, research, and the question I'm testing
+    playground-tests.md    test log with findings
+    tests/                 exact requests and raw responses as JSON
+```
+
+To add a use case, copy that layout into a new folder and add a row to the table above.
