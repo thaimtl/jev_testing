@@ -55,6 +55,29 @@ A tsunami rumor scenario in San Francisco served as the pilot.
 - [Experiment results](results.md): the hybrid runs 1,000 agents for half the cost of 100 Claude-only agents and matches Claude's fit to real Hurricane Dorian data (MAE 0.140 vs 0.132).
   Both trail AgentSociety's full simulator (0.076), so the environment, not the model mix, is now the bottleneck.
 
+## What this means
+
+Simulated people just got about 20x cheaper, and they didn't get dumber.
+Jev makes the easy calls, and Claude only steps in when someone's actually torn, which was about 4% of decisions.
+So for the same budget I can run a crowd 10x bigger that acts about as real as Claude alone.
+
+The catch is that my setup, with Claude or with the hybrid, still missed the real hurricane curve by about twice as much as AgentSociety's full simulator.
+Real trips dropped 48% during the storm, but mine only dropped 15% to 21%.
+I think that's because my agents pick one plan per day, and the storm message only says travel is "slightly affected", so they just skip the extra errand and still go to work.
+AgentSociety's agents re-plan every 30 minutes on a real map with their own needs and schedules, so they have room to cancel trips one by one as the weather hits.
+That's fine, because it tells me the brains aren't the bottleneck anymore, and the world they live in is.
+
+## What I'd build next
+
+AMD just [bought World Labs](https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute) for $8.2B, and Fei-Fei Li's team there makes models that generate whole 3D worlds you can walk around in.
+They build the stage, and this builds the crowd.
+
+- **A living San Francisco.** Drop 10k citizens into a 3D city like the ones World Labs generates, shake it, and watch who runs, who helps, and where traffic jams up.
+- **Test the alert before sending it.** Try five wordings of a tsunami alert on 10k simulated people and send the one that kills the rumor fastest.
+- **Game characters that aren't dumb.** Background characters run on Jev for pennies, and whoever the player's talking to gets Claude.
+- **Crowds for robot training.** Robots and self-driving cars need realistic people to practice around, which World Labs already pitches its worlds for.
+- **A rumor firewall.** Rerun AgentSociety's inflammatory-message experiment and find which moderation move actually slows the spread.
+
 ## Running it
 
 ```
