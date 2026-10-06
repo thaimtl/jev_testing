@@ -41,14 +41,29 @@ The low-confidence agents should be the same unusual agents where APS makes its 
 
 ## Experiment plan
 
-1. **Baseline.** Run AgentSociety's rumor-spread setup with 100 agents on Claude only.
-2. **Hybrid.** Run the same 100 agents with Jev and Claude, then compare action distributions with Jensen-Shannon divergence and compare cost.
-3. **Scale.** Run the hybrid at 1,000 and 10,000 agents and check whether rumor spread changes with scale, which is Wu and Xiao's open question.
+1. **Baseline.** Run a published agent-society experiment on Claude only.
+   I used AgentSociety's Hurricane Dorian mobility study, because it publishes real mobility data to check against.
+2. **Hybrid.** Run the same agents with Jev and Claude, then compare plan distributions with Jensen-Shannon divergence, the daily curve against real data, and cost.
+3. **Scale.** Run the hybrid at 1,000 and 10,000 agents.
 
-My cost estimate still needs measuring.
-Jev is about 100x cheaper per input token than Claude Opus 5, so if around 5% of decisions escalate, the hybrid should land around 15 to 20x cheaper than Claude alone.
+A tsunami rumor scenario in San Francisco served as the pilot.
 
 ## Progress
 
 - [Playground tests](playground-tests.md): confidence works as the System 2 trigger, wording controls realism, and batching stays cheap.
   Raw requests and responses are in [`tests/`](tests/).
+- [Experiment results](results.md): the hybrid runs 1,000 agents for half the cost of 100 Claude-only agents and matches Claude's fit to real Hurricane Dorian data (MAE 0.140 vs 0.132).
+  Both trail AgentSociety's full simulator (0.076), so the environment, not the model mix, is now the bottleneck.
+
+## Running it
+
+```
+pip install anthropic typesafe-sdk
+export ANTHROPIC_API_KEY=... TYPESAFE_API_KEY=...
+python hurricane.py run --mode hybrid --agents 100 --seed 1
+python hurricane.py report runs/hurricane-*.jsonl
+python sim.py --mode hybrid --agents 100 --seed 1      # tsunami pilot
+python analyze.py runs/*-n100-*.jsonl
+```
+
+Runs at 1,000 agents and up are gitignored because of their size.

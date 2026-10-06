@@ -7,7 +7,7 @@ Each use case gets its own folder with its background, experiments, and raw resu
 
 | Use case | Question | Status |
 |---|---|---|
-| [Agent simulation](use-cases/agent-simulation/) | Can Jev and Claude together run agent societies 10x bigger for the same cost? | Playground tests done |
+| [Agent simulation](use-cases/agent-simulation/) | Can Jev and Claude together run agent societies 10x bigger for the same cost? | Hurricane replication done |
 
 ## What Jev is
 
